@@ -17,3 +17,21 @@ Auth service is responsible for authentication and authorization of incoming req
 - Database should be designed in such a way to avoid the complex and LRQ
 
 ![Image](https://github.com/user-attachments/assets/2d106148-0217-4895-a01b-7fc4853b36fa)
+
+
+- SecurityConfig:- This class is about making Beans like applying filters that a request will go through before reaching to our controllers. Defining AuthenticationProvider and other related beans to be defined here.
+
+- JWTFilter:- It is a filter that will be applied to every request apart from the requests which are mentioned to bypass this filter in SecurityConfig class like `/auth/v1/refreshToken, /auth/v1/signup, /auth/v1/login`
+  
+- AuthController:- Here we will define endpoints like `/auth/v1/signup`, `/ping`
+  
+- JwtService:- It is a class which will be used to generateToken, validateToken, using claims to get userName, expiration etc
+
+- RefreshTokenService:- It is responsible for creation and validation of refresh tokens
+
+- UserDetailsServiceImpl:- It is responsible for signing up the user, loading/fetching a user and this class will extend the `UserDetailsService` of `*org.springframework.security.core.userdetails`* package which is a spring security package.
+
+- AuthenticationManager:- This comes from the spring boot security package that is responsible for authenticating a user based on its username and password.
+
+![image](https://github.com/user-attachments/assets/ff23b8e8-d4c0-4c5e-a088-83bac1de512b)
+
