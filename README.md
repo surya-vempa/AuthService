@@ -15,3 +15,5 @@ Auth service is responsible for authentication and authorization of incoming req
 
 - Authentication should not take too much time to avoid app open lag
 - Database should be designed in such a way to avoid the complex and LRQ
+
+![Image](https://github.com/user-attachments/assets/2d106148-0217-4895-a01b-7fc4853b36fa)
